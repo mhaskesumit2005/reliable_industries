@@ -1,0 +1,37 @@
+.navbar {
+  border-bottom: 3px solid #ff0000;
+  box-sizing: border-box;
+}
+
+.sidebar .btn-close {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.offcanvas-header {
+  border-bottom: 3px solid #ff0000;
+  box-sizing: border-box;
+}
+
+.nav-item .nav-link {
+  font-size: 17px !important;
+  font-weight: 500;
+}
+
+.nav-item .nav-link:hover {
+  color: #ff0000 !important;
+  transition: color 0.5s ease;
+}
+
+@media(max-width:667px) {
+  .navbar-brand img {
+    width: 260px !important;
+    height: auto !important;
+  }
+
+  .nav-item .nav-link {
+    font-size: 30px !important;
+    line-height: 60px !important;
+
+  }
+}

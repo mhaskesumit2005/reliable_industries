@@ -1,0 +1,910 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+#preloader {
+  background: #fff url(../images/infinite-spinner.svg) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  background-size: 8%;
+  position: fixed;
+  z-index: 9999;
+}
+
+
+*:focus {
+  outline: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.btn-scroll {
+  background-color: #ff0000;
+  padding: 12px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* breadcrumb */
+.breadcrumb-nav {
+  --bs-breadcrumb-divider: '>';
+}
+
+.breadcrumb .breadcrumb-item::before {
+  color: white !important;
+}
+
+.breadcrumb .breadcrumb-item,
+.breadcrumb .breadcrumb-item a {
+  color: white;
+}
+
+.breadcrumb .breadcrumb-item.active {
+  color: white;
+}
+
+
+/* Custom CSS */
+.bg-red {
+  background-color: #ff0000 !important;
+}
+
+.bg-black {
+  background: #000 !important;
+}
+
+.text-red {
+  color: #ff0000 !important;
+}
+
+.btn-danger {
+  background-color: #ff0000 !important;
+  color: #fff !important;
+}
+
+.btn-cat {
+  background: #fff !important;
+  color: #ff0000 !important;
+  border-color: #ff0000 !important;
+  font-weight: 500 !important;
+}
+
+.btn-cat:hover {
+  background: #ff0000 !important;
+  color: #fff !important;
+  transition: background 0.8s ease !important;
+}
+
+.bgc-gradient {
+  /* background: linear-gradient(to bottom right, #ff0000, #000);  */
+  background: linear-gradient(30deg, #ff0000, #000);
+  color: #fff;
+}
+
+.form-control {
+  border: none !important;
+  border-bottom: 2px solid #eae8e8 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: border-color 0.3s ease !important;
+}
+
+.form-control:focus {
+  border-color: #ff0000 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+select {
+  border-radius: none !important;
+}
+
+/* bg-video */
+.bg-video {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  object-fit: cover;
+}
+
+.bg-video .row {
+  position: relative;
+  z-index: 1;
+  /* Content stays above the video */
+}
+
+.bg-video h3,
+.bg-video a {
+  z-index: 2;
+  /* Ensure proper stacking of text and button */
+}
+
+/* bg img */
+.bg-bread {
+  position: relative;
+  background: url("https://www.utprinting.com/wp-content/uploads/2021/10/about-us-print-packaging-grand-rapids.jpg?id=1391");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  z-index: 1;
+}
+
+.bg-bread::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+
+/* bg img */
+.bg-img {
+  position: relative;
+  background: url("https://www.utprinting.com/wp-content/uploads/2021/10/about-us-print-packaging-grand-rapids.jpg?id=1391");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  z-index: 1;
+}
+
+.bg-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5) ;  */
+  /* background: linear-gradient(to bottom, rgba(255, 0, 0, 0.8), rgba(0, 0, 255, 0.5)); */
+  /* background: linear-gradient(90deg, #ff0000, #000); */
+  /* background: linear-gradient(90deg, rgba(255, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); */
+  background: linear-gradient(90deg, #ff0000, #000, rgba(0, 0, 0, 0.2));
+  /* background-color: linear-gradient(90deg, #ff0000, #000);  */
+  z-index: -1;
+}
+
+.bg-form {
+  position: relative;
+  background: url("https://www.utprinting.com/wp-content/uploads/2021/10/about-us-print-packaging-grand-rapids.jpg?id=1391");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  z-index: 1;
+}
+
+.bg-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000, rgba(0, 0, 0, 0.2));
+  z-index: -1;
+}
+
+.video-bg {
+  min-height: 100%;
+  min-width: 100%;
+  transform: scale(2.8);
+}
+
+.bg-video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* slider */
+.carousel-item img {
+  animation: zoomIn 2.5s ease forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.carousel_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 250px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.carousel_overlay h1 {
+  font-size: 75px;
+}
+
+.carousel_overlay p {
+  font-size: 25px;
+}
+
+.carousel_overlay .fa-quote-left {
+  font-size: 70px !important;
+}
+
+.carousel_overlay .fa-quote-right {
+  font-size: 70px !important;
+  float: right;
+}
+
+/* counter */
+.counter-box {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.row.g-0 .col-md-6:not(:last-child) .counter-box {
+  border-right: 1px solid #555;
+}
+
+.row.g-0 .col-md-6:nth-child(2) .counter-box {
+  border-right: none;
+}
+
+.row.g-0 .col-md-6:nth-child(1),
+.row.g-0 .col-md-6:nth-child(2) .counter-box {
+  border-bottom: 1px solid #555;
+}
+
+.counter-box .count {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.counter-box p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.txt-title {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+/* Style for the scroll-to-top button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 70px;
+  right: 25px;
+  display: none;
+  /* Hidden by default */
+  z-index: 99;
+}
+
+#wpBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 27px;
+  /* display: none; Hidden by default */
+  z-index: 99;
+}
+
+/*  */
+.enquiry_form {
+  border-top-left-radius: 40px !important;
+  border-top-right-radius: 160px !important;
+  border-bottom-left-radius: 40px !important;
+  border-bottom-right-radius: 40px !important;
+}
+
+.infra {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 160px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+/* industry */
+.industry-box {
+  position: relative;
+  margin-top: -155px;
+}
+
+.industry-card {
+  margin-top: 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.industry-box .industry-card .industry-img {
+  width: 35%;
+}
+
+/* Enquiry form placeholder color css */
+input::placeholder {
+  color: #aaa !important;
+  opacity: 1;
+}
+
+input:focus::placeholder {
+  color: #666 !important;
+}
+
+/* Enquiry form placeholder color css end */
+/* testimonial */
+.swiper-slide .fa-quote-right {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+  font-size: 70px;
+}
+
+
+/*** Footer ***/
+.footer {
+  margin-top: 3rem;
+  padding-top: 3rem;
+}
+
+
+.footer .btn.btn-social {
+  margin-right: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+  color: #ff0000;
+  /* border-color: #ff0000 !important; */
+}
+
+.footer .btn.btn-link {
+  display: block;
+  margin-bottom: 10px;
+  padding: 0;
+  text-align: left;
+  color: #fff;
+  font-weight: normal;
+  transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+  position: relative;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+  letter-spacing: 1px;
+  box-shadow: none;
+  color: #ff0000;
+}
+
+.footer .copyright {
+  padding: 25px 0;
+  border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright div {
+  color: #dadada;
+}
+
+.footer .footer-menu a {
+  margin-right: 15px;
+  text-decoration: none;
+  padding-right: 15px;
+  border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu a:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
+
+.footer .copyright a:hover,
+.footer .footer-menu a:hover {
+  color: #ff0000 !important;
+}
+
+.footer .social p,
+.footersletter p,
+.footer .copyright a {
+  color: #dadada;
+}
+
+/* blog */
+.img-container img {
+  transition: transform 0.3s ease;
+  transform: smooth translate;
+  object-fit: cover;
+}
+
+.img-container .card-img-top:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/* products */
+.category .border-danger {
+  border-color: #ff0000 !important;
+}
+
+.product_img:hover {
+  transform: rotateY(360deg);
+  transition: transform 0.8s ease-in-out;
+}
+
+.category .category-list .nav-tabs {
+  overflow-x: visible;
+  width: 100%;
+}
+
+.category .category-list .nav-tabs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth !important;
+}
+
+.category .category-list .nav-tabs h6 {
+  color: #000;
+}
+
+.category .category-list .nav-tabs .nav-link.active h6 {
+  color: #ff0000 !important;
+  transition: 0.5s ease-in-out;
+}
+
+.hash_rating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: auto;
+  overflow: hidden;
+  z-index: 1;
+  background: linear-gradient(30deg, #ff0000, #000);
+  clip-path: polygon(0 0, 100% 0%, 64% 100%, 0% 100%);
+  font-size: 15px;
+}
+
+.rating_star {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  top: 42%;
+  left: 60%;
+  z-index: 1;
+  background: linear-gradient(30deg, #ff0000, #000);
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* About Page css */
+.img_shadow {
+  filter: drop-shadow(0px 5px 8px rgba(0, 0, 0, 0.3));
+}
+
+.vision,
+.mission {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+  box-shadow: 0px 00px 10px rgb(0, 0, 0, 0.4);
+  max-height: fit-content;
+}
+
+.enquiry_form {
+  border-bottom-left-radius: 40px !important;
+  border-bottom-right-radius: 40px !important;
+  border-top-left-radius: 40px !important;
+  border-top-right-radius: 150px !important;
+}
+
+.vision {
+  background-color: white;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.vision-logo,
+.mission-logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  font-size: 25px;
+  position: relative;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background 0.5s ease-in-out;
+  behavior: smooth;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  z-index: 2;
+}
+
+.vision-logo {
+  background-color: rgb(246, 63, 63);
+  color: white !important;
+}
+
+.mission-logo {
+  background-color: rgb(246, 63, 63);
+  color: white !important;
+}
+
+.vision-logo:before,
+.mission-logo:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.vision:hover .vision-logo {
+  box-shadow: 0 0 0 400px red !important;
+  background-color: #fff !important;
+  color: red !important;
+  transform: scale(1.1);
+}
+
+.mission:hover .mission-logo {
+  box-shadow: 0 0 0 400px red !important;
+  background-color: #fff !important;
+  transform: scale(1.1);
+  color: red !important;
+}
+
+.vision:hover h3,
+.mission:hover h3,
+.vision:hover p,
+.mission:hover p {
+  color: white !important;
+  z-index: 3;
+  position: relative;
+}
+
+.vision-mission {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 40px 20px; */
+  text-align: center;
+}
+
+.text-title {
+  font-size: 50px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.excellence_cards {
+  height: 250px !important;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.excellence_cards:hover .icons_card {
+  transform: rotateY(360deg);
+  background: #fff !important;
+  color: red !important;
+  transition: transform 0.8s ease-in-out, background 0.8s ease-in-out, color 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+/* About Page css end */
+
+/* FAQ's css */
+.accordion-button {
+  font-size: 18px;
+  background-color: #F8F9FA;
+  color: black;
+  border-radius: 8px;
+  border: none;
+  padding: 15px;
+}
+
+.accordion-header p {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #F8F9FA;
+  color: black;
+
+}
+
+.accordion-item {
+  border: none;
+  margin-bottom: 15px;
+}
+
+.accordion-body {
+  background-color: #f9f9f9;
+}
+
+.accordion-button::after {
+  content: '+' !important;
+  font-size: 1.25rem;
+  position: absolute;
+  right: 1rem;
+  background-image: none !important;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: '-' !important;
+  background-image: none !important;
+  box-shadow: none;
+}
+
+.accordion-button:hover {
+  box-shadow: none !important;
+  forced-color-adjust: none !important;
+}
+
+.accordion-item {
+  border: none !important;
+  transition: none;
+
+}
+
+/* FAQ's css end */
+/* Product Details page css */
+/* Scope to the product-detail-tabs */
+
+.product-detail-tabs .nav-link.active {
+  border-bottom: 2px solid red !important;
+}
+
+.product-detail-tabs .nav-link {
+  color: #000 !important;
+}
+
+.product-detail-tabs .nav-link:hover {
+  color: #000;
+}
+
+/* image gallery */
+.product-gallery {
+  width: 80%;
+  margin: auto;
+}
+
+.product-gallery .main-image {
+  border: 1px solid #e2e2e2;
+  padding: 20px 0px;
+}
+
+.main-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.thumbnail-gallery {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 18%;
+  height: 18%;
+  object-fit: cover;
+  margin: 0 5px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  border-color: #ff0000;
+}
+
+/* Product Details page css end */
+
+
+@media(max-width: 667px) {
+  #preloader {
+    background-size: 30%;
+  }
+
+
+  .product-gallery {
+    width: 100%;
+  }
+
+  .topbar {
+    display: none !important;
+  }
+
+  .slider_img img {
+    width: 100%;
+    height: 100vh !important;
+    object-fit: cover;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .carousel_overlay div {
+    padding: 30px !important;
+  }
+
+  .carousel_overlay div h1 {
+    font-size: 40px !important;
+  }
+
+  .carousel_overlay div p {
+    font-size: 18px !important;
+  }
+
+  .carousel_overlay .fa-quote-left {
+    display: none !important;
+  }
+
+  .carousel_overlay .fa-quote-right {
+    display: none !important;
+  }
+
+  .row.g-0 .col-md-6:not(:last-child) .counter-box {
+    border-right: none !important;
+  }
+
+  .row.g-0 .col-md-6:nth-child(2) .counter-box {
+    border-right: none !important;
+  }
+
+  .row.g-0 .col-md-6:nth-child(1),
+  .row.g-0 .col-md-6:nth-child(2) .counter-box {
+    border-bottom: none !important;
+  }
+
+  .product_img:hover {
+    transform: none;
+  }
+
+  .rating_star {
+    top: 45% !important;
+  }
+
+  .img_shdadow {
+    width: 70% !important;
+  }
+
+  .excellence_cards {
+    height: fit-content !important;
+  }
+
+  .content {
+    margin-top: 30px !important;
+  }
+
+  .btn-cat {
+    display: none !important;
+  }
+
+  .accordion-button p {
+    font-size: 22px !important;
+  }
+
+  .accordion-body {
+    font-size: 20px !important;
+  }
+
+  .faq_gif img {
+    width: 100% !important;
+    height: 250px !important;
+  }
+
+  .product-detail-tabs .nav-tabs .nav-link {
+    font-size: 15px !important;
+  }
+
+}
+
+@media (max-width: 997px) {
+  .slider_img img {
+    width: 100%;
+    height: 90vh !important;
+    object-fit: cover;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .carousel_overlay {
+    padding: 50px !important;
+  }
+
+  .carousel_overlay h1 {
+    font-size: 70px !important;
+  }
+
+  .carousel_overlay p {
+    font-size: 25px !important;
+  }
+
+  .carousel_overlay .fa-quote-left {
+    display: none !important;
+  }
+
+  .carousel_overlay .fa-quote-right {
+    display: none !important;
+  }
+
+  .btn-cat {
+    display: none !important;
+  }
+
+  /* product */
+}
