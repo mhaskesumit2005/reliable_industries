@@ -155,7 +155,7 @@
                         <input type="hidden" name="status" value="Active">
                         <input type="hidden" name="enquiry_date">
                     </div>
-                    <button class="btn btn-danger rounded-0 px-3 py-2 mt-3" type="submit">Enquiry Now</button>
+                    <button class="bttn bttn-enquiry" type="submit">Enquiry Now</button>
                 </form>
             </div>
         </div>
@@ -205,7 +205,7 @@
     <div class="row py-5 position-relative z-index-1">
         <div class="text-center text-white py-5">
             <h1>Leveraging Advanced Technology and Robust Infrastructure</h1>
-            <a href="<?= base_url() ?>user/about" class="btn btn-danger rounded-0 px-3 py-2 mt-3">Know More</a>
+            <a href="<?= base_url() ?>user/about" class="bttn bttn-enquiry">Know More</a>
         </div>
     </div>
 </div>

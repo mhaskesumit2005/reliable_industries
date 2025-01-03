@@ -75,7 +75,7 @@
                         <input type="hidden" name="status" value="Active">
                         <input type="hidden" name="enquiry_date">
                     </div>
-                    <button class="btn btn-danger rounded-0 px-3 py-2 mt-3" type="submit">Enquiry Now</button>
+                    <button class="bttn bttn-enquiry" type="submit">Enquiry Now</button>
                 </form>
             </div>
         </div>
