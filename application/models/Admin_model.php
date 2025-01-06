@@ -24,7 +24,7 @@ class Admin_model extends CI_Model
 
         $query = $this->db->get('admin_account');
 
-        if ($query->num_rows() == 1) {
+        if ($query->num_rows() > 1) {
             return $query->row(); // Return the admin data if credentials match.
         } else {
             return false; // Return false if no match.
