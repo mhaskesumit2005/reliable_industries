@@ -21,13 +21,13 @@
             <div class="col-md-6 col-lg-3">
                 <p class="section-title text-white h5 mb-4">Pages<span></span></p>
                 <a class="btn btn-link" href="<?= base_url() ?>user/about">About Us</a>
-                <a class="btn btn-link" href="<?= base_url() ?>user/enquiry">Enquiry</a>
-                <a class="btn btn-link" href="<?= base_url() ?>user/blog">Blog</a>
                 <a class="btn btn-link" href="<?= base_url() ?>user/product">Products</a>
+                <a class="btn btn-link" href="<?= base_url() ?>user/blog">Blog</a>
+                <a class="btn btn-link" href="<?= base_url() ?>user/contact">Contact</a>
             </div>
             <div class="col-md-6 col-lg-3">
                 <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                <a class="btn btn-link" href="<?= base_url() ?>user/contact">Contact</a>
+                <a class="btn btn-link" href="<?= base_url() ?>user/enquiry">Enquiry</a>
                 <a class="btn btn-link" href="<?= base_url() ?>user/privacy_policy">Privacy Policy</a>
                 <a class="btn btn-link" href="<?= base_url() ?>user/faq">FAQ's</a>
             </div>
@@ -92,6 +92,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
+
+<!-- AOS animation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <!-- fontawesome icons kit cdn -->
 <script src="https://kit.fontawesome.com/e6b0e2e79d.js" crossorigin="anonymous"></script>
