@@ -276,86 +276,6 @@ class Admin extends CI_Controller
 
     // <============= Start Update Status =============> 
 
-    // public function update_status()
-    // {
-    //     // Retrieve GET data using CodeIgniter's request object
-    //     $enquiryId = $this->input->get('id');  // Retrieve 'id' from the URL
-    //     $newStatus = $this->input->get('status');  // Retrieve 'status' from the URL
-
-    //     // Validate inputs
-    //     if (empty($enquiryId) || empty($newStatus)) {
-    //         // Set an error flash message
-    //         $this->session->set_flashdata('error', 'Invalid request. Missing parameters.');
-    //         redirect($_SERVER['HTTP_REFERER']);
-    //     }
-
-    //     // Additional validation for `status` values
-    //     $allowedStatuses = ['Active', 'Pending', 'Complete', 'Cancel'];
-    //     if (!in_array($newStatus, $allowedStatuses)) {
-    //         // Set an error flash message
-    //         $this->session->set_flashdata('error', 'Invalid status provided.');
-    //         redirect($_SERVER['HTTP_REFERER']);  // Redirect back to the previous page
-    //     }
-
-    //     // Update the status
-    //     $update = $this->My_model->updateStatus($enquiryId, $newStatus);
-
-    //     if ($update) {
-    //         // Set a success flash message
-    //         $this->session->set_flashdata('success', 'Status updated successfully.');
-    //     } else {
-    //         // Set an error flash message
-    //         $this->session->set_flashdata('error', 'Failed to update status.');
-    //     }
-
-    //     // Redirect back to the previous page after update
-    //     redirect($_SERVER['HTTP_REFERER']);
-    // }
-
-    // public function update_status()
-    // {
-    //     // Retrieve GET data using CodeIgniter's request object
-    //     $enquiryId = $this->input->get('id');  // Retrieve 'id' from the URL
-    //     $newStatus = $this->input->get('status');  // Retrieve 'status' from the URL
-
-    //     // Validate inputs
-    //     if (empty($enquiryId) || empty($newStatus)) {
-    //         // Set an error flash message
-    //         $this->session->set_flashdata('error', 'Invalid request. Missing parameters.');
-
-    //         // JavaScript-based redirection
-    //         echo "<script>alert('Invalid request. Missing parameters.');</script>";
-    //         echo "<script>window.location.href = document.referrer;</script>";
-    //         exit;
-    //     }
-
-    //     // Additional validation for `status` values
-    //     $allowedStatuses = ['Active', 'Pending', 'Complete', 'Cancel'];
-    //     if (!in_array($newStatus, $allowedStatuses)) {
-    //         // Set an error flash message
-    //         $this->session->set_flashdata('error', 'Invalid status provided.');
-
-    //         // JavaScript-based redirection
-    //         echo "<script>alert('Invalid status provided.');</script>";
-    //         echo "<script>window.location.href = document.referrer;</script>";
-    //         exit;
-    //     }
-
-    //     // Update the status
-    //     $update = $this->My_model->updateStatus($enquiryId, $newStatus);
-
-    //     if ($update) {
-    //         // Set a success flash message
-    //         $this->session->set_flashdata('success', 'Status updated successfully.');
-    //     } else {
-    //         // Set an error flash message
-    //         $this->session->set_flashdata('error', 'Failed to update status.');
-    //     }
-
-    //     // JavaScript-based redirection after update
-    //     echo "<script>window.location.href = document.referrer;</script>";
-    // }
-
     public function update_status()
     {
         // Retrieve GET data using CodeIgniter's request object
@@ -816,7 +736,7 @@ class Admin extends CI_Controller
     public function about_reliable()
     {
         $data["about_reliable"] = $this->My_model->select("about_reliable", $_POST);
-        $this->navbar();
+        $this->navbar();    
         $this->load->view("admin/about_reliable", $data);
         $this->footer();
     }

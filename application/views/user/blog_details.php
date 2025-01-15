@@ -86,16 +86,6 @@
 
         </div>
         <div class="col-md-4 d-none d-sm-block">
-            <!-- search box -->
-            <div class="shadow p-4 mt-4">
-                <div class="input-group">
-                    <input type="text" class="form-control border" placeholder="Search...">
-                    <button class="btn btn-danger rounded-0 px-3 py-2 " type="button"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-            </div>
-
-            <!-- Recent Blogs Section -->
             <!-- Recent Blogs Section -->
             <div class="shadow p-4 mt-4">
                 <h5 class="mb-2">Related Blogs</h5>
