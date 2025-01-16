@@ -61,7 +61,9 @@
         <div class="copyright">
             <div class="row">
                 <div class="col-md-7 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="" href="<?= base_url() ?>"><?= $admin_account[0]['admin_organization'] ?></a>, All Right Reserved.
+                    &copy; <a class="" href="<?= base_url() ?>"><?= $admin_account[0]['admin_organization'] ?></a> <script>
+                            document.write(new Date().getFullYear());
+                            </script>, All Right Reserved.
                     Designed & Developed By <a class="" target="_blank" href="https://a2zithub.org/"><?= $admin_account[1]['admin_organization'] ?></a>
                 </div>
                 <div class="col-md-5 text-center text-md-end">
