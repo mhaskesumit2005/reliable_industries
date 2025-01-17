@@ -328,22 +328,22 @@ class Admin extends CI_Controller
         switch ($newStatus) {
             case 'Pending':
                 // Redirect to Pending List page
-                redirect(base_url('admin/enquiry_list'));
+                redirect(base_url()."admin/enquiry_list");
                 break;
         
             case 'Active':
                 // Redirect to Active List page
-                redirect(base_url('admin/active_enquiry'));
+                redirect(base_url()."admin/active_enquiry");
                 break;
         
             case 'Complete':
                 // Redirect to Complete Enquiry page
-                redirect(base_url('admin/complete_enquiry'));
+                redirect(base_url()."admin/complete_enquiry");
                 break;
         
             case 'Cancel':
                 // Redirect to Cancel Enquiry page
-                redirect(base_url('admin/cancel_enquiry'));
+                redirect(base_url()."admin/cancel_enquiry");
                 break;
         
             default:
