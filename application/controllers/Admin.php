@@ -328,22 +328,22 @@ class Admin extends CI_Controller
         switch ($newStatus) {
             case 'Pending':
                 // Redirect to Pending List page
-                echo "<script>window.location.href = 'http://localhost/reliable_industries/admin/enquiry_list';</script>";
+                echo "<script>window.location.href = '<?=base_url()?>/admin/enquiry_list';</script>";
                 break;
 
             case 'Active':
                 // Redirect to Active List page
-                echo "<script>window.location.href = 'http://localhost/reliable_industries/admin/active_enquiry';</script>";
+                echo "<script>window.location.href = '<?=base_url()?>/admin/active_enquiry';</script>";
                 break;
 
             case 'Complete':
                 // Redirect to Complete Enquiry page
-                echo "<script>window.location.href = 'http://localhost/reliable_industries/admin/complete_enquiry';</script>";
+                echo "<script>window.location.href = '<?=base_url()?>/admin/complete_enquiry';</script>";
                 break;
 
             case 'Cancel':
                 // Redirect to Cancel Enquiry page
-                echo "<script>window.location.href = 'http://localhost/reliable_industries/admin/cancel_enquiry';</script>";
+                echo "<script>window.location.href = '<?=base_url()?>/admin/cancel_enquiry';</script>";
                 break;
 
             default:
