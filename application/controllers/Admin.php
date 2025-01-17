@@ -328,33 +328,35 @@ class Admin extends CI_Controller
         switch ($newStatus) {
             case 'Pending':
                 // Redirect to Pending List page
-                echo "<script>window.location.href = '"<?=base_url()?>."/admin/enquiry_list';</script>";
+                redirect(base_url('admin/enquiry_list'));
                 break;
-
+        
             case 'Active':
                 // Redirect to Active List page
-                echo "<script>window.location.href = '"<?=base_url()?>."/admin/active_enquiry';</script>";
+                redirect(base_url('admin/active_enquiry'));
                 break;
-
+        
             case 'Complete':
                 // Redirect to Complete Enquiry page
-                echo "<script>window.location.href = '"<?=base_url()?>."/admin/complete_enquiry';</script>";
+                redirect(base_url('admin/complete_enquiry'));
                 break;
-
+        
             case 'Cancel':
                 // Redirect to Cancel Enquiry page
-                echo "<script>window.location.href = '"<?=base_url()?>."/admin/cancel_enquiry';</script>";
+                redirect(base_url('admin/cancel_enquiry'));
                 break;
-
+        
             default:
                 // Fallback to enquiry list if status is not recognized
-                echo "<script>if (document.referrer) {
-                            window.location.href = document.referrer;
-                        } else {
-                            window.location.href = '/enquiry_list';
-                        }</script>";
+                $referrer = $this->input->server('HTTP_REFERER');
+                if ($referrer) {
+                    redirect($referrer);
+                } else {
+                    redirect(base_url('admin/enquiry_list'));
+                }
                 break;
         }
+        
     }
 
     // <============= End Update Status =============> 
