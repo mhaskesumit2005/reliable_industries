@@ -277,73 +277,87 @@ class Admin extends CI_Controller
     // <============= Start Update Status =============> 
 
     public function update_status()
-{
-    // Retrieve GET data using CodeIgniter's input class
-    $enquiryId = $this->input->get('id');  // Retrieve 'id' from the URL
-    $newStatus = $this->input->get('status');  // Retrieve 'status' from the URL
+    {
+        // Retrieve GET data using CodeIgniter's request object
+        $enquiryId = $this->input->get('id');  // Retrieve 'id' from the URL
+        $newStatus = $this->input->get('status');  // Retrieve 'status' from the URL
 
-    // Validate inputs
-    if (empty($enquiryId) || empty($newStatus)) {
-        // Set an error flash message and redirect back
-        $this->session->set_flashdata('error', 'Invalid request. Missing parameters.');
-        return $this->_redirect_back_or_default('admin/enquiry_list');
+        // Validate inputs
+        if (empty($enquiryId) || empty($newStatus)) {
+            // Set an error flash message
+            $this->session->set_flashdata('error', 'Invalid request. Missing parameters.');
+
+            // JavaScript redirection using document.referrer with fallback
+            echo "<script>alert('Invalid request. Missing parameters.');</script>";
+            echo "<script>if (document.referrer) {
+                        window.location.href = document.referrer;
+                    } else {
+                        window.location.href = '/enquiry_list';
+                    }</script>";
+            exit;
+        }
+
+        // Additional validation for `status` values
+        $allowedStatuses = ['Active', 'Pending', 'Complete', 'Cancel'];
+        if (!in_array($newStatus, $allowedStatuses)) {
+            // Set an error flash message
+            $this->session->set_flashdata('error', 'Invalid status provided.');
+
+            // JavaScript redirection using document.referrer with fallback
+            echo "<script>alert('Invalid status provided.');</script>";
+            echo "<script>if (document.referrer) {
+                        window.location.href = document.referrer;
+                    } else {
+                        window.location.href = '/enquiry_list';
+                    }</script>";
+            exit;
+        }
+
+        // Update the status
+        $update = $this->My_model->updateStatus($enquiryId, $newStatus);
+
+        if ($update) {
+            // Set a success flash message
+            $this->session->set_flashdata('success', 'Status updated successfully.');
+        } else {
+            // Set an error flash message
+            $this->session->set_flashdata('error', 'Failed to update status.');
+        }
+
+        // Redirect based on the new status
+        switch ($newStatus) {
+            case 'Pending':
+                // Redirect to Pending List page
+                redirect(base_url()."admin/enquiry_list");
+                break;
+        
+            case 'Active':
+                // Redirect to Active List page
+                redirect(base_url()."admin/active_enquiry");
+                break;
+        
+            case 'Complete':
+                // Redirect to Complete Enquiry page
+                redirect(base_url()."admin/complete_enquiry");
+                break;
+        
+            case 'Cancel':
+                // Redirect to Cancel Enquiry page
+                redirect(base_url()."admin/cancel_enquiry");
+                break;
+        
+            default:
+                // Fallback to enquiry list if status is not recognized
+                $referrer = $this->input->server('HTTP_REFERER');
+                if ($referrer) {
+                    redirect($referrer);
+                } else {
+                    redirect(base_url('admin/enquiry_list'));
+                }
+                break;
+        }
+        
     }
-
-    // Validate `status` values
-    $allowedStatuses = ['Active', 'Pending', 'Complete', 'Cancel'];
-    if (!in_array($newStatus, $allowedStatuses)) {
-        // Set an error flash message and redirect back
-        $this->session->set_flashdata('error', 'Invalid status provided.');
-        return $this->_redirect_back_or_default('admin/enquiry_list');
-    }
-
-    // Update the status in the database
-    $update = $this->My_model->updateStatus($enquiryId, $newStatus);
-
-    // Set flash message based on update result
-    if ($update) {
-        $this->session->set_flashdata('success', 'Status updated successfully.');
-    } else {
-        $this->session->set_flashdata('error', 'Failed to update status.');
-    }
-
-    // Redirect based on the updated status
-    switch ($newStatus) {
-        case 'Pending':
-            redirect(base_url('admin/enquiry_list'));
-            break;
-
-        case 'Active':
-            redirect(base_url('admin/active_enquiry'));
-            break;
-
-        case 'Complete':
-            redirect(base_url('admin/complete_enquiry'));
-            break;
-
-        case 'Cancel':
-            redirect(base_url('admin/cancel_enquiry'));
-            break;
-
-        default:
-            // Fallback to referrer or default enquiry list
-            return $this->_redirect_back_or_default('admin/enquiry_list');
-    }
-}
-
-/**
- * Private helper method to redirect to the referrer or a default URL
- */
-private function _redirect_back_or_default($defaultUrl)
-{
-    $referrer = $this->input->server('HTTP_REFERER');
-    if ($referrer) {
-        redirect($referrer);
-    } else {
-        redirect(base_url($defaultUrl));
-    }
-}
-
 
     // <============= End Update Status =============> 
 
