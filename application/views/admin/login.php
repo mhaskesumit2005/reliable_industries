@@ -105,7 +105,9 @@
                         </form>
                     </div>
                 </div>
-                <p class="mt-5 text-center">© Reliable Industries, Developed By A2Z IT HUB PVT LTD</p>
+                <p class="mt-5 text-center" style="z-index: 9999; position:fixed;">© <script>
+                        document.write(new Date().getFullYear());
+                    </script> Reliable Industries, Developed By A2Z IT HUB PVT LTD</p>
             </div>
         </div>
     </div>

@@ -40,7 +40,7 @@
                         <div class="col-12 col-md-6 mb-3">
                             <label for="phone">Phone Number</label>
                             <input type="number" class="form-control bg-transparent text-white" name="enquiry_contact" id="phone"
-                                placeholder="Enter your phone number" autocomplete="off" required>
+                                placeholder="Enter your phone number" autocomplete="off" required maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10);">
                         </div>
                         <div class="col-12 col-md-6 mb-3">
                             <label for="package-type">Package Type</label>

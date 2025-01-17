@@ -50,7 +50,7 @@
                     <!-- Your newsletter form -->
                     <form action="<?= base_url() ?>user/newsletter" method="post">
                         <input type="hidden" name="newsletter_date" id="newsletter_date">
-                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" name="email" type="email" placeholder="Example@email.xxx" style="height: 48px;" required>
+                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" name="email" type="email" placeholder="example@email.com" style="height: 48px;" required>
                         <button class="btn shadow-none border-0 position-absolute top-0 end-0 mt-1 me-2" id="subscribe"><i class="fa fa-paper-plane text-red fs-4"></i></button>
                     </form>
                 </div>
@@ -61,9 +61,9 @@
         <div class="copyright">
             <div class="row">
                 <div class="col-md-7 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="" href="<?= base_url() ?>"><?= $admin_account[0]['admin_organization'] ?></a> <script>
+                    &copy; <script>
                             document.write(new Date().getFullYear());
-                            </script>, All Right Reserved.
+                            </script> <a class="" href="<?= base_url() ?>"><?= $admin_account[0]['admin_organization'] ?></a>, All Right Reserved.
                     Designed & Developed By <a class="" target="_blank" href="https://a2zithub.org/"><?= $admin_account[1]['admin_organization'] ?></a>
                 </div>
                 <div class="col-md-5 text-center text-md-end">

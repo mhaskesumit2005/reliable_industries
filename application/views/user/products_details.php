@@ -35,7 +35,7 @@
         </div>
         <div class="col-md-6 col-12 mt-4">
             <div>
-                <small>Home > Products > <?= $products[0]['category_manage_id'] ?> > <?= $products[0]['sub_category'] ?> > <?= $products[0]['products_name'] ?></small>
+            <small>Home > Products > <?= $products[0]['category_manage_id'] ?> > <?= $products[0]['sub_category'] ?> > <?= $products[0]['products_name'] ?></small>
                 <h2><?= $products[0]['products_name'] ?></h2>
                 <div class="text-start d-flex align-items-center">
                     <mark>

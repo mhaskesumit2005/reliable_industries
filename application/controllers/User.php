@@ -84,6 +84,7 @@ class User extends CI_Controller
         // Fetch the current product details
         $cond = ["products_id" => $products_id];
         $data["products"] = $this->Admin_model->select_where("products", $cond);
+        // $data['products'] = $this->My_model->get_products_with_category_names();
 
         // Fetch specifications for the product
         $data["specifications"] = $this->Admin_model->select_where("specification", $cond);

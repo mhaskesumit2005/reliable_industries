@@ -74,7 +74,8 @@
                     <input type="hidden" name="contact_date">
                     <input type="text" class="form-control my-4" name="name" placeholder="Enter Name" required>
                     <input type="email" class="form-control my-4" name="email" placeholder="Enter Email" required>
-                    <input type="number" class="form-control my-4" name="phone" placeholder="Enter Phone" required>
+                    <input type="number" class="form-control my-4" name="phone" placeholder="Enter Phone" required maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10);">
+
                     <input type="text" class="form-control my-4" name="subject" placeholder="Enter Subject" required>
                     <textarea id="" class="form-control" name="message" placeholder="Enter Your Messages.."
                         required></textarea>

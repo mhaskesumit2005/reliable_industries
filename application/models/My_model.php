@@ -131,4 +131,15 @@ class My_model extends CI_Model
         $query = $this->db->get_where($table, $conditions);
         return $query->row(); // Return a single result (or null if not found)
     }
+
+
+    // ProductModel.php
+    public function get_products_with_category_names()
+    {
+        $this->db->select('products.*, category_manage.category_name');
+        $this->db->from('products');
+        $this->db->join('category_manage', 'products.category_manage_id = category_manage.category_manage_id');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
 }
