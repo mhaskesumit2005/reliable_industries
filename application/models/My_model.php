@@ -16,7 +16,7 @@ class My_model extends CI_Model
         $status = 'Pending';
         $this->db->where('status', 'active', $cond);
         $this->db->where('enquiry_status', $status);
-        $this->db->order_by('enquiry_date', 'DESC');
+        $this->db->order_by('enquiry_datetime', 'DESC');
         return $this->db->where($cond)->get($tname)->result_array();
     }
     // <---==================Active Records==================---> 
@@ -25,7 +25,7 @@ class My_model extends CI_Model
         $status = 'Active';
         $this->db->where('status', 'active', $cond);
         $this->db->where('enquiry_status', $status);
-        $this->db->order_by('enquiry_date', 'DESC');
+        $this->db->order_by('enquiry_datetime', 'DESC');
         return $this->db->where($cond)->get($tname)->result_array();
     }
     // <---==================Complete Records==================---> 
@@ -34,7 +34,7 @@ class My_model extends CI_Model
         $status = 'Complete';
         $this->db->where('status', 'active', $cond);
         $this->db->where('enquiry_status', $status);
-        $this->db->order_by('enquiry_date', 'DESC');
+        $this->db->order_by('enquiry_datetime', 'DESC');
         return $this->db->where($cond)->get($tname)->result_array();
     }
     // <---==================Cancel Records==================---> 
@@ -43,7 +43,7 @@ class My_model extends CI_Model
         $status = 'Cancel';
         $this->db->where('status', 'active', $cond);
         $this->db->where('enquiry_status', $status);
-        $this->db->order_by('enquiry_date', 'DESC');
+        $this->db->order_by('enquiry_datetime', 'DESC');
         return $this->db->where($cond)->get($tname)->result_array();
     }
 
@@ -132,14 +132,4 @@ class My_model extends CI_Model
         return $query->row(); // Return a single result (or null if not found)
     }
 
-
-    // ProductModel.php
-    public function get_products_with_category_names()
-    {
-        $this->db->select('products.*, category_manage.category_name');
-        $this->db->from('products');
-        $this->db->join('category_manage', 'products.category_manage_id = category_manage.category_manage_id');
-        $query = $this->db->get();
-        return $query->result_array();
-    }
 }

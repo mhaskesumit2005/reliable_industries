@@ -155,14 +155,14 @@
                     <!-- contact  -->
                     <li class="menu-item">
                         <a href="<?= base_url() ?>admin/contact" class="menu-link">
-                            <i class="menu-icon tf-icons bx bxs-contact"></i>
+                        <i class='bx bx-phone-call me-2'></i>
                             <div class="text-truncate" data-i18n="Contact">Contact</div>
                         </a>
                     </li>
                     <!-- Subscriber -->
                     <li class="menu-item">
                         <a href="<?= base_url() ?>admin/subscriber" class="menu-link">
-                            <i class="menu-icon tf-icons bx bxs-user"></i>
+                        <i class='bx bx-user-pin me-2'></i>
                             <div class="text-truncate" data-i18n="Subscriber">Subscriber</div>
                         </a>
                     </li>
@@ -215,7 +215,7 @@
                     <!-- About Start -->
                     <li class="menu-item">
                         <a href="javascript:void(0);" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-cog"></i>
+                            <i class='bx bx-info-square me-2'></i>
                             <div class="text-truncate" data-i18n="Home">About</div>
                         </a>
                         <ul class="menu-sub">
@@ -245,15 +245,14 @@
 
                     <li class="menu-item">
                         <a href="<?= base_url() ?>admin/blog" class="menu-link">
-                            <!-- <i class="menu-icon tf-icons bx bx-user"></i> -->
-                            <i class="menu-icon tf-icons bx bx-share-alt"></i>
+                            <i class='bx bx-news me-2'></i>
                             <div class="text-truncate" data-i18n="Blog">Blog</div>
                         </a>
                     </li>
                     <!-- Privacy Policy -->
                     <li class="menu-item">
                         <a href="<?= base_url() ?>admin/privacy_policy" class="menu-link">
-                            <i class="menu-icon tf-icons fas fa-shield-alt"></i>
+                        <i class='bx bx-check-shield me-2'></i>
                             <div class="text-truncate" data-i18n="Privacy Policy">Privacy Policy</div>
                         </a>
                     </li>
@@ -269,7 +268,7 @@
                     <!-- Our Manufacturing Unit's  -->
                     <li class="menu-item">
                         <a href="<?= base_url() ?>admin/manufacturing_units" class="menu-link">
-                            <i class="menu-icon tf-icons fas fa-industry"></i>
+                        <i class='bx bx-buildings me-3'></i>
                             <div class="text-truncate" data-i18n="Our Manufacturing Unit's">Our Unit's</div>
                         </a>
                     </li>

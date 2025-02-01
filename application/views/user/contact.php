@@ -67,19 +67,38 @@
             </div>
         </div>
         <div class="col-md-5 text-center py-5">
-            <div class="enquiry_form shadow p-4 ">
-                <img src="<?= base_url() ?>uploads/<?= $company_profile[0]['company_favicon'] ?>" alt="" class="w-25 mb-3">
+            <div class="enquiry_form shadow p-4">
+                <img src="<?= base_url() ?>uploads/<?= $company_profile[0]['company_favicon'] ?>" alt="Company Logo" class="w-25 mb-3">
                 <h6>We Would Be Happy To Assist You</h6>
-                <form action="<?= base_url() ?>user/send_contact" method="post" onsubmit="return confirm('Are you sure you want to Submit..?');">
+                <form action="<?= base_url() ?>user/send_contact" method="post" class="needs-validation" novalidate onsubmit="return confirm('Are you sure you want to submit..?');">
                     <input type="hidden" name="contact_date">
-                    <input type="text" class="form-control my-4" name="name" placeholder="Enter Name" required>
-                    <input type="email" class="form-control my-4" name="email" placeholder="Enter Email" required>
-                    <input type="number" class="form-control my-4" name="phone" placeholder="Enter Phone" required maxlength="10" oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10);">
 
-                    <input type="text" class="form-control my-4" name="subject" placeholder="Enter Subject" required>
-                    <textarea id="" class="form-control" name="message" placeholder="Enter Your Messages.."
-                        required></textarea>
-                    <button type="submit" class="btn btn-danger rounded-0 px-3 py-2 mt-5">Send Message</button>
+                    <div class="mb-3">
+                        <input type="text" class="form-control mt-4" name="name" placeholder="Enter Name" required>
+                        <div class="invalid-feedback text-start">Please enter your name.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="email" class="form-control mt-4" name="email" placeholder="Enter Email" required>
+                        <div class="invalid-feedback text-start">Please enter a valid email address.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control mt-4" name="phone" placeholder="Enter Phone" required maxlength="10" minlength="10" pattern="\d{10}"
+                            oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10);">
+                        <div class="invalid-feedback text-start">Please enter a valid 10-digit phone number.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control mt-4" name="subject" placeholder="Enter Subject" required>
+                        <div class="invalid-feedback text-start">Please enter a subject.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea class="form-control" name="message" placeholder="Enter Your Messages.." required></textarea>
+                        <div class="invalid-feedback text-start">Please enter your message.</div>
+                    </div>
+                    <button type="submit" class="bttn bttn-enquiry text-dark">Send Message</button>
                 </form>
             </div>
         </div>

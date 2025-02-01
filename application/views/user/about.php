@@ -76,7 +76,7 @@
             </div>
 
             <!-- Content Section -->
-            <div class="col-md-5 d-flex align-items-center">
+            <div class="col-sm-12 col-lg-5 d-flex align-items-center">
                 <div class="text-start content">
                     <p class="text-danger"><?= $vision_mission[0]['sub_title'] ?></p>
                     <h1 class="fw-bold"><?= $vision_mission[0]['title'] ?></h1>
@@ -90,20 +90,22 @@
 <!-- Excellence section -->
 <div class="container py-5">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-sm-12 col-lg-6">
             <div class="mt-4">
+            <p class="text-danger m-0">Excellence & Quality Control</p>
+
                 <h1 class="fw-bold"><?= $excellence[0]['title'] ?></h1>
                 <p class="fs-5"><?= $excellence[0]['description'] ?></p>
             </div>
             <div class="card card-body border border-danger enquiry_form excellence_cards p-4">
                 <div class="row">
-                    <div class="col-3 col-md-2 p-1 d-flex align-items-center">
+                    <div class="col-sm-12 col-lg-2 p-1 d-flex align-items-center ">
                         <div
-                            class="card card-body icons_card border border-danger bg-danger text-white p-4 text-center shadow rounded-circle">
+                            class="card card-body icons_card border border-danger bg-danger text-white text-center p-4 shadow rounded-circle">
                             <i class="fa-solid fa-ranking-star fs-1"></i>
                         </div>
                     </div>
-                    <div class="col-9 col-md-9 p-2 d-flex align-items-center">
+                    <div class="col-sm-12 col-lg-9 p-2 d-flex align-items-center">
                         <div>
                             <h4 class="text-uppercase fw-bold"><?= $excellence[0]['title_1'] ?></h4>
                             <span class="fw-normal"><?= $excellence[0]['description_1'] ?></span>
@@ -112,16 +114,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-12 col-lg-6">
             <div class="card card-body border border-danger enquiry_form mt-4 excellence_cards p-4">
                 <div class="row">
-                    <div class="col-3 col-md-2 p-1 d-flex align-items-center">
+                    <div class="col-sm-12 col-lg-2 p-1 d-flex align-items-center ">
                         <div
-                            class="card card-body icons_card border border-danger bg-danger text-white p-4 text-center shadow rounded-circle">
+                            class="card card-body icons_card border border-danger bg-danger w-100 text-white p-4 text-center shadow rounded-circle">
                             <i class="fa-solid fa-boxes-packing fs-1"></i>
                         </div>
                     </div>
-                    <div class="col-9 col-md-9 p-2 d-flex align-items-center">
+                    <div class="col-sm-12 col-lg-9 p-2 d-flex align-items-center">
                         <div>
                             <h4 class="text-uppercase fw-bold"><?= $excellence[0]['title_2'] ?></h4>
                             <span class="fw-normal"><?= $excellence[0]['description_2'] ?></span>
@@ -132,13 +134,13 @@
 
             <div class="card card-body border border-danger enquiry_form mt-4 excellence_cards p-4">
                 <div class="row">
-                    <div class="col-3 col-md-2 p-1 d-flex align-items-center">
+                    <div class="col-sm-12 col-lg-2 p-1 d-flex align-items-center ">
                         <div
-                            class="card card-body icons_card border border-danger bg-danger text-white p-4 text-center shadow rounded-circle">
+                            class="card card-body icons_card border border-danger bg-danger w-100 text-white p-4 text-center shadow rounded-circle">
                             <i class="fa-solid fa-print fs-1"></i>
                         </div>
                     </div>
-                    <div class="col-9 col-md-9 p-2 d-flex align-items-center">
+                    <div class="col-sm-12 col-lg-9 p-2 d-flex align-items-center">
                         <div>
                             <h4 class="text-uppercase fw-bold"><?= $excellence[0]['title_3'] ?></h4>
                             <span class="fw-normal"><?= $excellence[0]['description_3'] ?></span>

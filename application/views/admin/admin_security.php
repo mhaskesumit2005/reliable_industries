@@ -40,8 +40,6 @@
                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
               </div>
             </div>
-
-
             <div class="mt-6">
               <button type="submit" class="btn btn-primary me-3">Save Changes &nbsp; <i class="fas fa-save"></i></button>
               <a href="<?= base_url() ?>admin/admin_profile" class="btn btn-outline-secondary">Cancel &nbsp; <i class="fa fa-times" aria-hidden="true"></i></a>

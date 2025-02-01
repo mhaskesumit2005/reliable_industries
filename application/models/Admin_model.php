@@ -12,6 +12,7 @@ class Admin_model extends CI_Model
     {
         return $this->db->where($cond)->get($tname)->result_array();
     }
+    
     public function update($tname, $cond, $data)
     {
         $this->db->where($cond)->update($tname, $data);
@@ -130,4 +131,13 @@ class Admin_model extends CI_Model
 
         return $query->result_array();
     }
+
+    // public function get_cats()
+    // {
+    //     $this->db->select('products. *, category_manage.category_name');
+    //     $this->db->from('products');
+    //     $this->db->join('category_manage','products.category_manage_id = category_manage.category_manage_id');
+    //     $query = $this->db->get("");
+    //     return $query->result_array();
+    // }
 }

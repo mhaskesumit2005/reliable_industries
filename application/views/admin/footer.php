@@ -35,7 +35,7 @@
     <a
         href="https://a2zithub.org/"
         target="_blank"
-        class="btn btn-danger btn-buy-now"><i class='bx bx-support me-2'></i>Support</a>
+        class="btn btn-danger btn-sm btn-buy-now"><i class='bx bx-support me-2 fs-5'></i>Support</a>
 </div>
 <!-- Include jQuery before the closing body tag if it's not already included -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

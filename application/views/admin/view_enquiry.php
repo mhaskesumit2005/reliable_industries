@@ -12,18 +12,18 @@
 
                 <div class="col-md-6">
                     <div class="text-lg-end text-center p-5">
-                        <a class="btn btn-success btn-sm"
-                            target="_blank"
-                            href="https://wa.me/+91<?= $enquires[0]['enquiry_contact'] ?>?text=👋 Hello <?= $enquires[0]['enquiry_name'] ?>!%0A
-   🌟 Thank you for your enquiry on <?= $enquires[0]['enquiry_date'] ?>.%0A%0A
-   Here are your details:%0A
-   📌 Enquiry Status: <?= $enquires[0]['enquiry_status'] ?>%0A
-   📦 Packaging Type: <?= $enquires[0]['enquiry_packaging_type'] ?>%0A
-   🏭 Industry: <?= $enquires[0]['enquiry_industry'] ?>%0A
-   📊 Minimum Order: <?= $enquires[0]['enquiry_minimum_order'] ?>%0A%0A
-   ❓ If you have any further questions, feel free to ask!%0A%0A
-   🤝 Regards,%0A
-   🌐 Reliable Industries">
+                    <a class="btn btn-success btn-sm"
+   target="_blank"
+   href="https://wa.me/+91<?= $enquires[0]['enquiry_contact'] ?>?text=👋 *Dear <?= $enquires[0]['enquiry_name'] ?>!*%0A
+   🌟 *Thank you for your enquiry on <?= $enquires[0]['enquiry_datetime'] ?>.*%0A%0A
+   Here are your details :%0A
+   *Enquiry Status :* <?= $enquires[0]['enquiry_status'] ?>%0A
+   *Packaging Type :* <?= $enquires[0]['enquiry_packaging_type'] ?>%0A
+   *Industry :* <?= $enquires[0]['enquiry_industry'] ?>%0A
+   *Minimum Order :* <?= $enquires[0]['enquiry_minimum_order'] ?>%0A%0A
+   *If you have any further questions, feel free to ask!*%0A%0A
+   🤝 *Regards,*%0A
+   🌐 *Reliable Industries*">
                             <i class="fa-brands fa-whatsapp fs-4 me-lg-2 me-0"></i>
                             <span class="d-none d-lg-block">WhatsApp</span>
                         </a>
@@ -33,7 +33,7 @@
 
                         <a class="btn btn-dark btn-sm" 
    href="mailto: <?= $enquires[0]['enquiry_email'] ?>?subject=Thank%20you%20for%20your%20enquiry
-   &body=🌟%20Thank%20you%20for%20your%20enquiry%20on%20<?= urlencode($enquires[0]['enquiry_date']) ?>.%0A%0A
+   &body=🌟%20Thank%20you%20for%20your%20enquiry%20on%20<?= urlencode($enquires[0]['enquiry_datetime']) ?>.%0A%0A
    Here%20are%20your%20details:%0A
    📌%20Enquiry%20Status:%20<?= urlencode($enquires[0]['enquiry_status']) ?>%0A
    📦%20Packaging%20Type:%20<?= urlencode($enquires[0]['enquiry_packaging_type']) ?>%0A
@@ -54,7 +54,7 @@
                 <table class="table  table-bordered table-sm mb-5">
                     <tr>
                         <th>Enquiry Status</th>
-                        <th>Enquiry Date</th>
+                        <th>Enquiry Date / Time</th>
                         <th>Name</th>
                         <th>Mobile</th>
                         <th>Email</th>
@@ -80,7 +80,7 @@
                     ?>
                         <tr>
                             <td><span class="badge <?= $badgeClass ?> me-1"><?= $row['enquiry_status'] ?></span></td>
-                            <td><?= $enquires[0]['enquiry_date'] ?></td>
+                            <td><?= $enquires[0]['enquiry_datetime'] ?></td>
                             <td><?= $enquires[0]['enquiry_name'] ?></td>
                             <td>+91 <?= $enquires[0]['enquiry_contact'] ?></td>
                             <td><?= $enquires[0]['enquiry_email'] ?></td>

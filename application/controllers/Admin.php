@@ -328,24 +328,24 @@ class Admin extends CI_Controller
         switch ($newStatus) {
             case 'Pending':
                 // Redirect to Pending List page
-                redirect(base_url()."admin/enquiry_list");
+                redirect(base_url() . "admin/enquiry_list");
                 break;
-        
+
             case 'Active':
                 // Redirect to Active List page
-                redirect(base_url()."admin/active_enquiry");
+                redirect(base_url() . "admin/active_enquiry");
                 break;
-        
+
             case 'Complete':
                 // Redirect to Complete Enquiry page
-                redirect(base_url()."admin/complete_enquiry");
+                redirect(base_url() . "admin/complete_enquiry");
                 break;
-        
+
             case 'Cancel':
                 // Redirect to Cancel Enquiry page
-                redirect(base_url()."admin/cancel_enquiry");
+                redirect(base_url() . "admin/cancel_enquiry");
                 break;
-        
+
             default:
                 // Fallback to enquiry list if status is not recognized
                 $referrer = $this->input->server('HTTP_REFERER');
@@ -356,7 +356,6 @@ class Admin extends CI_Controller
                 }
                 break;
         }
-        
     }
 
     // <============= End Update Status =============> 
@@ -738,7 +737,7 @@ class Admin extends CI_Controller
     public function about_reliable()
     {
         $data["about_reliable"] = $this->My_model->select("about_reliable", $_POST);
-        $this->navbar();    
+        $this->navbar();
         $this->load->view("admin/about_reliable", $data);
         $this->footer();
     }
@@ -1076,7 +1075,7 @@ class Admin extends CI_Controller
     {
         $cond = ["products_id" => $products_id];
         $data["products"] = $this->Admin_model->select_where("products", $cond);
-
+        // $data['products'] = $this->Admin_model->get_cats();
         // Fetch specifications for the product
         $data["specifications"] = $this->Admin_model->select_where("specification", $cond);
         $this->navbar();

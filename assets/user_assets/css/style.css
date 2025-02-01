@@ -15,6 +15,7 @@
   position: fixed;
   z-index: 9999;
 }
+
 .bttn {
   padding: 10px 15px;
   margin-top: 20px;
@@ -25,6 +26,7 @@
   cursor: pointer;
   display: inline-block;
 }
+
 .bttn-enquiry {
   color: #fff;
   border: 3px solid #ff0000;
@@ -37,6 +39,7 @@
   -webkit-transition: background 300ms ease-in-out;
   transition: background 300ms ease-in-out;
 }
+
 .bttn-enquiry:hover {
   background-position: 100%;
   color: #fff;
@@ -823,7 +826,7 @@ input:focus::placeholder {
   }
 
   .carousel_overlay div {
-    padding: 30px !important;
+    padding: 10px !important;
   }
 
   .carousel_overlay div h1 {
@@ -871,6 +874,12 @@ input:focus::placeholder {
     height: fit-content !important;
   }
 
+  .excellence_cards .icons_card {
+    max-width: fit-content !important;
+    border-radius: 50% !important;
+    /* justify-content: center !important; */
+  }
+
   .content {
     margin-top: 30px !important;
   }
@@ -896,6 +905,13 @@ input:focus::placeholder {
     font-size: 15px !important;
   }
 
+  .infra {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+  }
+
 }
 
 @media (max-width: 997px) {
@@ -908,7 +924,8 @@ input:focus::placeholder {
   }
 
   .carousel_overlay {
-    padding: 50px !important;
+    padding: 10px !important;
+    text-align: center !important;
   }
 
   .carousel_overlay h1 {
@@ -929,6 +946,15 @@ input:focus::placeholder {
 
   .btn-cat {
     display: none !important;
+  }
+
+  .excellence_cards {
+    height: fit-content !important;
+  }
+
+  .excellence_cards .icons_card {
+    max-width: fit-content !important;
+    border-radius: 50% !important;
   }
 
   /* product */

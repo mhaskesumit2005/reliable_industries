@@ -5,7 +5,7 @@
             <div class="col-md-6 col-lg-3 social">
                 <p class="section-title text-white h5 mb-4">Head Office<span></span></p>
                 <p><i class="fa fa-map-marker-alt me-3"></i><?= $company_profile[0]['company_address'] ?></p>
-                <a href="callto:+91 <?= $company_profile[0]['alter_company_phone'] ?>">
+                <a href="callto:+91<?= $company_profile[0]['alter_company_phone'] ?>">
                     <p><i class="fa fa-phone-alt me-3"></i>+91 <?= $company_profile[0]['alter_company_phone'] ?></p>
                 </a>
                 <a href="mailto:<?= $company_profile[0]['company_email'] ?>">
@@ -48,10 +48,23 @@
                     <?php endif; ?>
 
                     <!-- Your newsletter form -->
-                    <form action="<?= base_url() ?>user/newsletter" method="post">
+                    <!-- <form action="<?= base_url() ?>user/newsletter" method="post">
                         <input type="hidden" name="newsletter_date" id="newsletter_date">
                         <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" name="email" type="email" placeholder="example@email.com" style="height: 48px;" required>
                         <button class="btn shadow-none border-0 position-absolute top-0 end-0 mt-1 me-2" id="subscribe"><i class="fa fa-paper-plane text-red fs-4"></i></button>
+                    </form> -->
+                    <form action="<?= base_url() ?>user/newsletter" method="post" class="needs-validation position-relative" novalidate>
+                        <input type="hidden" name="newsletter_date" id="newsletter_date">
+                        <div class="bg-white px-3 rounded-pill">
+                            <input class="form-control bg-transparant rounded-pill border-0" name="email" type="email" placeholder="example@email.com" style="height: 48px; width: 90%;" required autocomplete="off">
+
+                            <div class="invalid-feedback position-absolute" style="top: 100%; left: 20px; font-size: 0.875rem;">
+                                Please provide a valid email address.
+                            </div>
+                            <button class="btn shadow-none border-0 position-absolute top-0 end-0 mt-1" type="submit" id="subscribe" aria-label="Subscribe">
+                                <i class="fa fa-paper-plane text-red fs-4"></i>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -62,15 +75,15 @@
             <div class="row">
                 <div class="col-md-7 text-center text-md-start mb-3 mb-md-0">
                     &copy; <script>
-                            document.write(new Date().getFullYear());
-                            </script> <a class="" href="<?= base_url() ?>"><?= $admin_account[0]['admin_organization'] ?></a>, All Right Reserved.
+                        document.write(new Date().getFullYear());
+                    </script> <a class="" href="<?= base_url() ?>"><?= $admin_account[0]['admin_organization'] ?></a>, All Right Reserved.
                     Designed & Developed By <a class="" target="_blank" href="https://a2zithub.org/"><?= $admin_account[1]['admin_organization'] ?></a>
                 </div>
                 <div class="col-md-5 text-center text-md-end">
                     <div class="footer-menu">
                         <a href="<?= base_url() ?>">Home</a>
                         <a href="<?= base_url() ?>user/privacy_policy">Privacy Policy</a>
-                        <a href="<?= base_url() ?>user/faq">FQA's</a>
+                        <a href="<?= base_url() ?>user/faq">FAQ's</a>
                     </div>
                 </div>
             </div>
@@ -166,49 +179,21 @@
         const minutes = String(date.getMinutes()).padStart(2, '0');
         const seconds = String(date.getSeconds()).padStart(2, '0'); // Optional if not needed
 
-        // Return formatted date and time
-        return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
+        // Return formatted date and time in a single string
+        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
     }
 
     // Get the current date and time
     const now = new Date();
     const formattedDateTime = formatDateTime(now);
 
-    // Set the value of the datetime-local input field
-    document.querySelector('input[name="enquiry_date"]').value = formattedDateTime;
+    // Set the value of a single datetime input field
+    document.querySelector('input[name="enquiry_datetime"]').value = formattedDateTime;
 </script>
 
 
 <script>
     document.getElementById('newsletter_date').value = new Date().toISOString().split('T')[0]
-</script>
-
-<script>
-    // Sample visitor count and percentage change
-    let visitorCount = 0;
-    let previousVisitorCount = 0; // Initialize with the previous count for comparison
-
-    // Example function to simulate fetching visitor count
-    function updateVisitorStats() {
-        // Here you can replace with an actual API call
-        visitorCount = Math.floor(Math.random() * 1000); // Simulating random visitor count
-
-        // Calculate the percentage change in visitors
-        let changePercentage = previousVisitorCount === 0 ? 0 : ((visitorCount - previousVisitorCount) / previousVisitorCount) * 100;
-
-        // Update the DOM elements with the fetched data
-        document.getElementById('visitor-count').textContent = visitorCount;
-        document.getElementById('visitor-percentage').innerHTML = `<i class="bx bx-up-arrow-alt"></i> ${changePercentage.toFixed(2)}%`;
-
-        // Save the new count for the next comparison
-        previousVisitorCount = visitorCount;
-    }
-
-    // Call the update function every 10 seconds
-    setInterval(updateVisitorStats, 10000);
-
-    // Initial call to display the visitor stats
-    updateVisitorStats();
 </script>
 
 <script>
@@ -242,6 +227,27 @@
         });
     });
 </script>
+
+<script>
+    // Bootstrap 5 validation script
+    (function() {
+        'use strict';
+        const forms = document.querySelectorAll('.needs-validation');
+
+        Array.prototype.slice.call(forms).forEach(function(form) {
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>
+
+<!-- navbar active  -->
 
 </body>
 

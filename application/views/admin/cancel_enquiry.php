@@ -10,7 +10,7 @@
                     <thead>
                         <tr class="text-center">
                             <th>Status</th>
-                            <th>Date</th>
+                            <th>Date/Time</th>
                             <th>Name</th>
                             <th>Contact</th>
                             <th>Packaging Type</th>
@@ -40,7 +40,7 @@
                         ?>
                             <tr>
                                 <td><span class="badge <?= $badgeClass ?> me-1"><?= $row['enquiry_status'] ?></span></td>
-                                <td><?= $row['enquiry_date'] ?></td>
+                                <td><?= $row['enquiry_datetime'] ?></td>
                                 <td><?= $row['enquiry_name'] ?></td>
                                 <td>+91 <?= $row['enquiry_contact'] ?></td>
                                 <td><?= $row['enquiry_packaging_type'] ?></td>
