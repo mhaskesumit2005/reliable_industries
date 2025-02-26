@@ -24,7 +24,6 @@
               </label>
               <div>Allowed JPG, GIF or PNG. Max size of 800K</div>
             </div>
-
         </div>
       </div>
       <div class="card-body pt-4">

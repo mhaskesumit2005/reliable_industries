@@ -456,6 +456,7 @@ class Admin extends CI_Controller
             move_uploaded_file($_FILES['slider_image']['tmp_name'], "uploads/" . $file_name);
             $_POST['slider_image'] = $file_name;
         }
+        
         $this->My_model->insert('slider', $_POST);
         redirect(base_url() . "admin/slider");
     }

@@ -29,8 +29,7 @@ class User extends CI_Controller
 
     public function enquiry_now()
     {
-        echo "<pre>";
-        print_r($_POST);
+        
         $this->My_model->insert("enquires", $_POST);
         redirect(base_url());
     }

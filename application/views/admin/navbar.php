@@ -309,7 +309,7 @@
                                     href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                        <img src="<?= base_url() ?>uploads/<?php echo $admin->admin_image; ?>" style="object-fit:cover;" alt class=" h-100 w-100 rounded-circle" />
+                                        <img src="<?= base_url() ?>uploads/<?php echo $admin->admin_image; ?>" style="object-fit:cover;" alt="admin_profile_photo" class=" h-100 w-100 rounded-circle" />
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
